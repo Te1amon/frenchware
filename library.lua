@@ -110,7 +110,7 @@ end
     
         local gayShit = {}
     
-        function gayShit:Toggle(configShit)
+        function gayShit:Toggle(text, callback, toggled)
             local toggled = false;
             local ToggleFrame = Instance.new("Frame")
             local ToggleButton = Instance.new("TextButton")
@@ -173,7 +173,7 @@ end
             ToggleText.TextXAlignment = Enum.TextXAlignment.Left
         end
     
-        function gayShit:Button(configShit)
+        function gayShit:Button(text, callback)
             local ButtonYes = Instance.new("TextButton")
             local RoundingShit = Instance.new("ImageLabel")
             
@@ -186,10 +186,10 @@ end
             ButtonYes.Size = UDim2.new(0, 340, 0, 25)
             ButtonYes.ZIndex = 2
             ButtonYes.Font = Enum.Font.SourceSansBold
-            ButtonYes.Text = configShit.text
+            ButtonYes.Text = text
             ButtonYes.TextColor3 = Color3.fromRGB(255, 119, 0)
             ButtonYes.TextSize = 14.000
-            ButtonYes.MouseButton1Down:Connect(configShit.callback)
+            ButtonYes.MouseButton1Down:Connect(callback)
             btnEffect(ButtonYes)
             
             RoundingShit.Name = "RoundingShit"
@@ -208,7 +208,7 @@ end
             RoundingShit.SliceScale = 0.040
         end
     
-        function gayShit:Text(configShit)
+        function gayShit:Text(text)
             local LabelFrame = Instance.new("Frame")
             local LabelText = Instance.new("TextLabel")
             
@@ -228,7 +228,7 @@ end
             LabelText.Size = UDim2.new(0, 309, 0, 10)
             LabelText.ZIndex = 3
             LabelText.Font = Enum.Font.SourceSansBold
-            LabelText.Text = configShit.text
+            LabelText.Text = text
             LabelText.TextColor3 = Color3.fromRGB(255, 119, 0)
             LabelText.TextSize = 14.000
         end
