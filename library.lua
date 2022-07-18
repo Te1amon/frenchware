@@ -110,7 +110,7 @@ end
     
         local gayShit = {}
     
-        function gayShit:Toggle(text, callback, toggled)
+        function gayShit:Toggle(text, callback)
             local toggled = false;
             local ToggleFrame = Instance.new("Frame")
             local ToggleButton = Instance.new("TextButton")
@@ -140,7 +140,7 @@ end
         ToggleButton.MouseButton1Down:Connect(function()
             toggled = not toggled
             local newText = toggled and "X" or ""
-            configShit.callback(toggled)
+            callback()
             ToggleButton.Text = newText
         end)
             
@@ -231,53 +231,6 @@ end
             LabelText.Text = text
             LabelText.TextColor3 = Color3.fromRGB(255, 119, 0)
             LabelText.TextSize = 14.000
-        end
-    
-        function gayShit:TextBox(configShit)
-            local TextBox = Instance.new("TextBox")
-            local TextBoxRoudningSHit = Instance.new("ImageLabel")
-            
-            TextBox.Parent = ItemFrame
-            TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            TextBox.BackgroundTransparency = 1.000
-            TextBox.BorderSizePixel = 0
-            TextBox.Size = UDim2.new(0, 340, 0, 25)
-            TextBox.ZIndex = 2
-            TextBox.Font = Enum.Font.SourceSansBold
-            TextBox.PlaceholderColor3 = Color3.fromRGB(159, 74, 0)
-            TextBox.PlaceholderText = configShit.text
-            TextBox.Text = ""
-            TextBox.TextColor3 = Color3.fromRGB(255, 119, 0)
-            TextBox.TextSize = 14.000
-        TextBox.FocusLost:Connect(function(enterpressed)
-            local hehehe = configShit.type
-                if hehehe == "string" then
-                configShit.callback(tostring(TextBox.Text))
-                TextBox.Text = ""
-                end
-            if hehehe == "number" then
-                if tonumber(TextBox.Text) then
-                configShit.callback(tonumber(TextBox.Text))
-                    TextBox.Text = ""
-                    end
-                end
-            TextBox.Text = ""
-            end)
-            
-            TextBoxRoudningSHit.Name = "TextBoxRoudningSHit"
-            TextBoxRoudningSHit.Parent = TextBox
-            TextBoxRoudningSHit.Active = true
-            TextBoxRoudningSHit.AnchorPoint = Vector2.new(0.5, 0.5)
-            TextBoxRoudningSHit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            TextBoxRoudningSHit.BackgroundTransparency = 1.000
-            TextBoxRoudningSHit.Position = UDim2.new(0.5, 0, 0.5, 0)
-            TextBoxRoudningSHit.Selectable = true
-            TextBoxRoudningSHit.Size = UDim2.new(1, 0, 1, 0)
-            TextBoxRoudningSHit.Image = "rbxassetid://3570695787"
-            TextBoxRoudningSHit.ImageColor3 = Color3.fromRGB(15, 15, 15)
-            TextBoxRoudningSHit.ScaleType = Enum.ScaleType.Slice
-            TextBoxRoudningSHit.SliceCenter = Rect.new(100, 100, 100, 100)
-            TextBoxRoudningSHit.SliceScale = 0.040
         end
     
     
