@@ -167,7 +167,7 @@ end
             ToggleText.Size = UDim2.new(0, 309, 0, 10)
             ToggleText.ZIndex = 3
             ToggleText.Font = Enum.Font.SourceSansBold
-            ToggleText.Text = configShit.text
+            ToggleText.Text = text
             ToggleText.TextColor3 = Color3.fromRGB(255, 119, 0)
             ToggleText.TextSize = 14.000
             ToggleText.TextXAlignment = Enum.TextXAlignment.Left
