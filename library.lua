@@ -86,7 +86,7 @@ end
         Title.Size = UDim2.new(0, 66, 0, 10)
         Title.ZIndex = 3
         Title.Font = Enum.Font.SourceSansBold
-        Title.Text = "TintenFisch"
+        Title.Text = "Frenchware 2.0"
         Title.TextColor3 = Color3.fromRGB(255, 119, 0)
         Title.TextSize = 14.000
         Title.TextXAlignment = Enum.TextXAlignment.Left
